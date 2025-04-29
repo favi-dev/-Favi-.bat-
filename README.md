@@ -1,91 +1,66 @@
-🧹 1. تنظيف كامل للنظام
-حذف ملفات المؤقتات (Temp):
+Full System Cleanup
 
-يقوم بحذف جميع الملفات المؤقتة التي يخزنها النظام والبرامج في %TEMP% و C:\Windows\Temp لتحرير المساحة.
+Delete Temporary Files (Temp): Removes all temporary files stored by the system and applications in %TEMP% and C:\Windows\Temp to free up space.
 
-حذف ملفات Prefetch:
+Delete Prefetch Files: These files help speed up program launches but accumulate over time and slow down the system. The script deletes them to refresh performance.
 
-هذه الملفات تساعد في تسريع فتح البرامج، لكنها تتراكم وتبطئ النظام بمرور الوقت. السكربت يحذفها لتجديد الأداء.
+Delete Recent Files: Removes the list of recently opened files from the "Quick Access" and "Start" menus.
 
-حذف ملفات Recent:
+Delete Windows.old Files: These files appear after a major Windows update. Deleting them frees up a significant amount of space.
 
-حذف سجل الملفات المفتوحة مؤخرًا من قائمة "تشغيل سريع" و"ابدأ".
+Delete Logs Folder: Log files are unnecessary for the average user and can take up space when accumulated.
 
-حذف ملفات Windows.old:
+Delete Delivery Optimization Files: These files are stored to speed up updates but take up space.
 
-هذه الملفات تظهر بعد التحديث الكبير لويندوز. حذفها يوفر مساحة كبيرة.
+Delete SoftwareDistribution Files: These are cached update files that sometimes cause issues or consume space.
 
-حذف مجلد Logs:
+Automatically Empty Recycle Bin:
+Using PowerShell, the script empties the Recycle Bin completely without requiring user intervention.
 
-ملفات السجلات لا يحتاجها المستخدم العادي، وتراكمها يستهلك مساحة.
+Delete Thumbnail Cache:
+Removes thumbnail cache to free up space and speed up browser and file response times.
 
-حذف Delivery Optimization:
+Clean DNS Cache:
+Using ipconfig /flushdns, the browsing experience is sped up by clearing the cached website addresses.
 
-ملفات يتم تخزينها لتسريع تحميل التحديثات، لكنها تستهلك مساحة.
+Clear and Optimize RAM:
+With ProcessIdleTasks, the script frees system resources from idle processes to enhance performance.
 
-حذف SoftwareDistribution:
+Fix and Optimize System Components:
+Using:
 
-ملفات تخزين مؤقت لتحديثات ويندوز، أحيانًا تسبب مشاكل أو تستهلك مساحة.
+DISM /Cleanup-Image: Repairs corrupted system files.
 
-🗑️ 2. تنظيف سلة المهملات تلقائيًا
-عبر PowerShell، يتم تفريغ Recycle Bin بالكامل بدون تدخل منك.
+SFC /Scannow: Scans and fixes corrupted system files.
 
-📸 3. حذف كاش الصور المصغرة (Thumbnails)
-لتحرير المساحة وتسريع استجابة المتصفح والملفات.
+Speed Up System Boot:
+Through bcdedit commands:
 
-🌐 4. تنظيف DNS Cache
-عبر ipconfig /flushdns يتم تسريع التصفح من خلال إزالة التخزين المؤقت لعناوين المواقع.
+useplatformclock and disabledynamictick improve boot timing and system performance.
 
-💾 5. تفريغ وتحسين الذاكرة العشوائية (RAM)
-باستخدام ProcessIdleTasks يتم تحرير موارد النظام من العمليات الراكدة لتسريع الأداء.
+Enable High-Performance Mode:
+Activates a custom power plan to maximize CPU and system resource usage.
 
-🧱 6. إصلاح وتحسين مكونات النظام
-باستخدام:
+Disable Background Applications:
+Reduces RAM and battery consumption by stopping unnecessary background processes.
 
-DISM /Cleanup-Image: يصلح ملفات النظام التالفة.
+Optimize Program Launch Priority:
+Using Win32PrioritySeparation, the script gives higher priority to user applications rather than background processes.
 
-SFC /Scannow: يفحص ملفات النظام ويصلح التالفة منها.
+Open Update and Driver Settings:
+Automatically opens the Windows update page to install:
 
-🚀 7. تسريع إقلاع النظام
-عبر أوامر bcdedit:
+System updates
 
-useplatformclock و disabledynamictick تساعد على تحسين توقيت الإقلاع وتحسين أداء النظام.
+Uninstalled device drivers
 
-⚙️ 8. تفعيل وضع الأداء العالي (High Performance Mode)
-يتم تفعيل خطة طاقة مخصصة لاستخدام أقصى قدرة للمعالج وموارد النظام.
+Run Disk Cleanup Tool:
+Executes cleanmgr /sagerun:1 to manually remove excess files.
 
-🔇 9. تعطيل تطبيقات الخلفية
-يقلل من استهلاك الرام والبطارية عبر إيقاف البرامج التي تعمل دون حاجة.
+Suitable for Beginners and Professionals:
 
-⚖️ 10. تحسين أولوية تشغيل البرامج
-عبر Win32PrioritySeparation، يعطي السكربت أولوية أكبر لتطبيقات المستخدم بدلًا من العمليات الخلفية.
+No external programs required.
 
-🔄 11. فتح إعدادات التحديث والتعريفات
-يقوم بفتح صفحة تحديثات ويندوز تلقائيًا لتثبيت:
+Safe, with no risk of deleting personal files.
 
-تحديثات النظام
-
-تعريفات الأجهزة غير المُثبتة
-
-🧼 12. تشغيل أداة تنظيف الأقراص (Disk Cleanup)
-يقوم بتشغيل cleanmgr /sagerun:1 لإزالة الملفات الزائدة يدويًا أيضًا.
-
-✅ 13. مناسب للمبتدئين والمحترفين
-لا يحتاج إلى برامج خارجية.
-
-آمن ولا يسبب أي حذف للملفات الشخصية.
-
-سهل التشغيل بنقرة واحدة.
-
-📌 ماذا يحدث بعد تشغيل Favi؟
-تنظيف شامل لكل الأقراص
-
-سرعة أكبر في التصفح، الإقلاع، والتعامل مع البرامج
-
-استقرار أفضل للنظام
-
-استعادة المساحة التخزينية المهدورة
-
-معالجة مشاكل النظام الصامتة
-
-تحسين تجربة استخدام ويندوز بشكل ملحوظ
+Simple to run with one click.
