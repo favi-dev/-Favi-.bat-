@@ -2,7 +2,7 @@
 title Favi - Full System Cleanup
 color 0A
 
-echo Favi: جاري تنظيف وتسريع الجهاز...
+echo Favi: Cleaning and speeding up the device..
 timeout /t 2 >nul
 
 net stop wuauserv >nul 2>&1
