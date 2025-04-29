@@ -1,5 +1,5 @@
 @echo off
-title Favi - تنظيف شامل وتحسين أداء النظام
+title Favi - Full System Cleanup
 color 0A
 
 echo Favi: جاري تنظيف وتسريع الجهاز...
@@ -55,6 +55,6 @@ start ms-settings:windowsupdate
 cleanmgr /sagerun:1
 
 echo.
-echo Favi: تم التنفيذ الكامل بنجاح!
-echo يُفضل إعادة تشغيل الجهاز الآن للحصول على أفضل أداء.
+echo Favi: !
+echo 
 pause
